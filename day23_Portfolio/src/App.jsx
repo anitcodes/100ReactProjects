@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Home from "./sections/Home";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
@@ -7,14 +7,20 @@ import Footer from "./sections/Footer";
 import Contact from "./sections/Contact";
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div>
-      <Navbar />
-      <Sidebar />
-      <Home />
-      <About />
-      <Contact />
-      <Footer />
+    <div
+      className={`min-h-screen transition-all duration-300 ${
+        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
+      }`}
+    >
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Sidebar darkMode={darkMode} />
+      <Home darkMode={darkMode} />
+      <About darkMode={darkMode} />
+      <Contact darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
     </div>
   );
 };
