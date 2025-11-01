@@ -1,6 +1,0 @@
-@import "tailwindcss";
-
-
-#todoListContainer::-webkit-scrollbar {
-  display: none; 
-}

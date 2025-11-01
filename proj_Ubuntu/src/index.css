@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+.taskbarIcon {
+    height: 24px;
+    width: 24px;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.taskbarIcon:hover {
+    transform: scale(1.2);
+}
+
+.notification {
+    height: 18px;
+    width: 18px;
+    object-fit: cover;
+}
+
+.deskIcon {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.deskIcon:hover {
+    transform: scale(1.1);
+}
+
+.deskLabel {
+    text-align: center;
+    width: 60px;
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+/* Optional scrollbar hidden for desktop */
+#desktop {
+    overflow-y: auto;
+    padding-bottom: 2rem;
+}
